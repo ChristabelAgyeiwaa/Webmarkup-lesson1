@@ -1,0 +1,5 @@
+Student name: Christabel Agyeiwaa
+Student number: 758011
+Student class: IT1B
+GitHub Repository:
+GitHub Pages URL: https://github.com/dashboard
