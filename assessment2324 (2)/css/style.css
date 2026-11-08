@@ -1,1 +1,969 @@
-/* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+/* Website colours */
+
+:root {
+	--primary-color: #FFF8ED;
+	--secondary-color: #667A45;
+	--accent-color: #C65D32;
+	--text-color: #1F1F1F;
+	--background-color: #FFFFFF;
+} 
+/* General website styling */
+
+body {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	margin: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Lora', serif;
+}
+/* Paragraph styling */
+
+p {
+	font-size: 1rem;
+	line-height: 1.8;
+	max-width: 65ch;
+}
+/* Image styling */
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+/* Main content styling */
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+/* Header styling */
+
+header {
+	background-color: var(--secondary-color);
+	color: white;
+	padding: 1.5rem 2rem;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2rem;
+	letter-spacing: 1px;
+}
+/* Navigation styling */
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+/* Navigation hover effects */
+
+nav a:hover {
+	color: var(--accent-color);
+}
+
+nav a:active {
+	text-decoration: underline;
+}
+/* Heading styling */
+
+h2 {
+	font-size: 2rem;
+	color: var(--secondary-color);
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+	color: var(--accent-color);
+	margin-bottom: 0.5rem;
+}
+/* Section spacing */
+
+main section {
+	margin-bottom: 3rem;
+}
+
+main article {
+	margin-bottom: 3rem;
+}
+/* Image and caption styling */
+
+figure {
+	margin: 1.5rem 0;
+}
+
+figure img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	border-radius: 12px;
+}
+
+figcaption {
+	font-size: 0.9rem;
+	color: var(--text-color);
+	margin-top: 0.5rem;
+	font-style: italic;
+}
+/* Footer styling */
+
+footer {
+	background-color: var(--secondary-color);
+	color: white;
+	text-align: center;
+	padding: 1.5rem;
+	margin-top: 3rem;
+}
+
+footer p {
+	margin: 0 auto;
+}
+/* Contact form styling */
+
+form label,
+form input,
+form textarea {
+	display: block;
+	margin-bottom: 0.75rem;
+}
+
+form input,
+form textarea {
+	padding: 0.75rem;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+form textarea {
+	width: 100%;
+	max-width: 500px;
+	min-height: 150px;
+}
+/* Contact input widths */
+
+#name {
+	width: 250px;
+}
+
+#email {
+	width: 350px;
+}
+/* Contact button styling */
+
+input[type="submit"] {
+	background-color: var(--accent-color);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 0.75rem 1.5rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: var(--secondary-color);
+}
+/* Nutrition table styling */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1.5rem;
+}
+
+th, td {
+	padding: 1rem;
+	text-align: left;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--secondary-color);
+}
+
+th {
+	background-color: var(--secondary-color);
+	color: white;
+}
+/* Alternating nutrition table row colours */
+
+tr:nth-child(even) {
+    background-color: #CFF;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF;
+}
+/* Alternating table row colours */
+
+tr:nth-child(even) {
+	background-color: #CFF;
+}
+
+tr:nth-child(odd) {
+	background-color: #FFF;
+}
+/* Recipe heading styling */
+
+main article h3,
+main section h3 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+/* Paragraph indentation */
+
+main section p {
+	text-indent: 1em;
+}
+/* Word spacing */
+
+main p {
+	word-spacing: 0.05em;
+}
+
+/* First letter styling */
+
+main > section:first-child > p:first-of-type::first-letter,
+main > p:first-of-type::first-letter {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+/* Header positioning */
+
+header {
+    position: relative;
+}
+/* Cookie message */
+
+.cookie-message {
+    position: relative;
+    z-index: 9999;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+/* Mobile screen styling */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+    /* Desktop screen styling */
+
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        padding: 2rem;
+    }
+}
+/* Beginner tip styling */
+
+@media (min-width: 769px) {
+    main aside:not(.cookie-message) {
+        float: right;
+        width: 250px;
+        margin: 1rem 0 1rem 2rem;
+        padding: 1rem;
+        background-color: white;
+        border-left: 4px solid var(--accent-color);
+        border-radius: 8px;
+    }
+}
+/* Footer layout */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Mobile beginner tip styling */
+
+@media (max-width: 768px) {
+    main aside:not(.cookie-message) {
+        float: none;
+        width: auto;
+        padding: 1rem;
+        margin: 1rem 0;
+        background-color: white;
+        border-left: 4px solid var(--accent-color);
+        border-radius: 8px;
+    }
+}
+/* Mobile contact form styling */
+
+@media (max-width: 768px) {
+    #name,
+    #email,
+    form textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+/* Mobile nutrition table styling */
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        overflow-wrap: anywhere;
+    }
+}
+/* Mobile cookie message styling */
+
+@media (max-width: 768px) {
+    .cookie-message {
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
+    }
+}
+/* Home page hero button */
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero-button:hover {
+    background-color: var(--accent-color);
+}
+/* Home page hero layout */
+
+@media (min-width: 769px) {
+    .home-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+/* Home page hero heading */
+
+.home-hero h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+/* Home page hero background */
+
+.home-hero {
+    background-color: #F5EBDD;
+    padding: 2rem;
+    border-radius: 20px;
+}
+/* Home page hero image */
+
+.home-hero figure {
+    margin: 0;
+}
+
+.home-hero figure img {
+    width: 100%;
+    max-width: none;
+    border-radius: 16px;
+}
+/* Home page recipe card layout */
+
+@media (min-width: 769px) {
+    .home-recipes {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .home-recipes > h2,
+    .home-recipes > p {
+        grid-column: 1 / -1;
+    }
+}
+/* Home page recipe card images */
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+/* Home page recipe section spacing */
+
+.home-recipes {
+    row-gap: 0.75rem;
+}
+
+.home-recipes h2,
+.home-recipes > p {
+    margin: 0;
+}
+
+.home-recipes .recipe-card {
+    margin-bottom: 0;
+}
+/* Home page recipe card labels */
+
+.recipe-card figcaption {
+    background-color: white;
+    color: var(--text-color);
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+}
+
+.recipe-card a {
+    text-decoration: none;
+}
+/* Recipe labels on images */
+
+.recipe-card figure {
+    position: relative;
+    margin: 0;
+}
+
+.recipe-card figcaption {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+}
+/* Home recipe section heading */
+
+.home-recipes > h2,
+.home-recipes > p {
+    text-align: center;
+    max-width: none;
+}
+/* Home page kitchen section */
+
+.home-kitchen figure {
+    margin: 1.5rem 0;
+}
+
+.home-kitchen figure img {
+    width: 100%;
+    max-width: none;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+/* Kitchen banner on mobile */
+
+@media (max-width: 768px) {
+    .home-kitchen figure img {
+        height: 200px;
+    }
+}
+/* Kitchen image on desktop */
+
+@media (min-width: 769px) {
+    .home-kitchen figure img {
+        height: auto;
+        object-fit: contain;
+    }
+}
+.kitchen-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.kitchen-links a {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.kitchen-links a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Keep kitchen button text visible */
+
+.kitchen-links a:visited,
+.kitchen-links a:active {
+    color: white;
+}
+/* Centre the kitchen section heading */
+
+.home-kitchen > h2,
+.home-kitchen > p {
+    text-align: center;
+    max-width: none;
+}
+/* Recipe cards on mobile */
+
+@media (max-width: 768px) {
+    .home-recipes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .home-recipes > h2,
+    .home-recipes > p {
+        grid-column: 1 / -1;
+    }
+}
+/* Recipe labels on mobile */
+
+@media (max-width: 768px) {
+    .recipe-card figcaption {
+        white-space: normal;
+        width: 80%;
+        box-sizing: border-box;
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+}
+/* Home hero on mobile */
+
+@media (max-width: 768px) {
+    .home-hero h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .home-hero {
+        padding: 1.5rem;
+    }
+}
+/* Home hero image on mobile */
+
+@media (max-width: 768px) {
+    .home-hero figure {
+        margin-top: 1.5rem;
+    }
+
+    .home-hero figure img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+/* Mobile navigation menu */
+
+@media (max-width: 768px) {
+    nav ul {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav a {
+        text-align: center;
+    }
+}
+/* Mobile website header */
+
+@media (max-width: 768px) {
+    header h1 {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
+/* Kitchen buttons on mobile */
+
+@media (max-width: 768px) {
+    .kitchen-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kitchen-links a {
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+}
+/* Centre the fifth recipe card on mobile */
+
+@media (max-width: 768px) {
+    .home-recipes .recipe-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 0.5rem);
+        justify-self: center;
+    }
+}
+/* Recipe card hover effect */
+
+.recipe-card img {
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.03);
+}
+/* Cooking Tools page introduction */
+
+.tools-page > h2,
+.tools-page > p {
+    text-align: center;
+    max-width: none;
+}
+/* Cooking Tools page image */
+
+.tools-page > figure {
+    max-width: 850px;
+    margin: 2rem auto;
+}
+
+.tools-page > figure img {
+    width: 100%;
+    max-width: none;
+    border-radius: 16px;
+}
+
+.tools-page > figure figcaption {
+    text-align: center;
+}
+/* Cooking Tools cards */
+
+.tools-page section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+.tools-page > section h3 {
+    margin-top: 0;
+}
+
+.tools-page > section p {
+    margin-bottom: 0;
+}
+/* Cooking Tools: two columns on desktop */
+
+@media (min-width: 769px) {
+    .tools-page.tools-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .tools-page.tools-grid > h2,
+    .tools-page.tools-grid > p,
+    .tools-page.tools-grid > figure,
+    .tools-page.tools-grid > aside {
+        grid-column: 1 / -1;
+    }
+
+    .tools-page.tools-grid > section {
+        margin-bottom: 0;
+    }
+}
+/* Cooking Tools cards on mobile */
+
+@media (max-width: 768px) {
+    .tools-page.tools-grid {
+        display: block;
+    }
+
+    .tools-page section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+/* Kitchen Appliances page introduction */
+
+.appliances-page > h2,
+.appliances-page > p {
+    text-align: center;
+    max-width: none;
+}
+/* Kitchen Appliances description cards */
+
+.appliances-page section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.appliances-page section h2 {
+    margin-top: 0;
+}
+/* Kitchen Appliances desktop grid */
+
+@media (min-width: 769px) {
+    .appliances-page.appliances-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-content: start;
+    }
+
+    .appliances-grid > h2,
+    .appliances-grid > p,
+    .appliances-grid > figure {
+        grid-column: 1 / -1;
+    }
+
+    .appliances-grid > section {
+        margin-bottom: 0;
+    }
+}
+/* Kitchen Appliances page image */
+
+.appliances-page > figure {
+    max-width: 850px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.appliances-page > figure img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 16px;
+}
+
+.appliances-page > figure figcaption {
+    text-align: center;
+}
+/* Kitchen Appliances cards on mobile */
+
+@media (max-width: 768px) {
+    .appliances-page.appliances-grid {
+        display: block;
+    }
+
+    .appliances-page section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+/* Nutrition page introduction */
+
+.nutrition-page > h2,
+.nutrition-page > p {
+    text-align: center;
+    max-width: none;
+}
+/* Nutrition information cards */
+
+.nutrition-page section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.nutrition-page section h2,
+.nutrition-page section h3 {
+    margin-top: 0;
+}
+/* Nutrition desktop layout */
+
+@media (min-width: 769px) {
+    .nutrition-page.nutrition-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-content: start;
+    }
+
+    .nutrition-grid > h2,
+    .nutrition-grid > p,
+    .nutrition-grid > figure,
+    .nutrition-grid > table {
+        grid-column: 1 / -1;
+    }
+
+    .nutrition-grid > section {
+        margin-bottom: 0;
+    }
+}
+/* Nutrition page image */
+
+.nutrition-page > figure {
+    width: 100%;
+    max-width: 850px;
+    margin: 2rem auto;
+}
+
+.nutrition-page > figure img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 16px;
+}
+
+.nutrition-page > figure figcaption {
+    text-align: center;
+}
+/* Nutrition cards on mobile */
+
+@media (max-width: 768px) {
+    .nutrition-page.nutrition-grid {
+        display: block;
+    }
+
+    .nutrition-page section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+/* Recipes page introduction */
+
+.recipes-page > h2,
+.recipes-page > p {
+    text-align: center;
+    max-width: none;
+}
+/* Recipe page cards */
+
+.recipes-page > article,
+.recipes-page > section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--secondary-color);
+}
+/* Recipes page images */
+
+.recipes-page figure {
+    max-width: 700px;
+    margin: 1.5rem auto;
+}
+
+.recipes-page figure img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 12px;
+}
+
+.recipes-page figcaption {
+    text-align: center;
+}
+/* Recipe ingredients and instructions */
+
+.recipes-page li {
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.recipes-page h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+/* Recipe cards on mobile */
+
+@media (max-width: 768px) {
+    .recipes-page > article,
+    .recipes-page > section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .recipes-page figure {
+        width: 100%;
+        margin: 1rem auto;
+    }
+}
+/* Contact page introduction */
+
+.contact-page > h2,
+.contact-page > p {
+    text-align: center;
+    max-width: none;
+}
+/* Contact form card */
+
+.contact-page form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--secondary-color);
+    max-width: 650px;
+    margin: 2rem auto;
+}
+/* Contact form input fields */
+
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+/* Contact form focus effect */
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+/* Contact form on mobile */
+
+@media (max-width: 768px) {
+    .contact-page form {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .contact-page #name,
+    .contact-page #email,
+    .contact-page textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
